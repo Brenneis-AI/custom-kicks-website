@@ -1,2 +1,8 @@
 /pages/home/home.html  /  301
 /pages/home/home       /  301
+/shop                  /pages/shop/shop.html                         200
+/sell-consign          /pages/sell-consign/sell-consign.html         200
+/about                 /pages/about/about.html                       200
+/faq                   /pages/faq/faq.html                           200
+/contact               /pages/contact/contact.html                   200
+/product-detail        /pages/product-detail/product-detail.html     200
