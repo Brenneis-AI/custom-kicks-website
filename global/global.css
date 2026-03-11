@@ -258,15 +258,17 @@ h6 {
 
 .nav-logo {
   font-family: var(--font-display);
-  font-size: 22px;
-  letter-spacing: 0.06em;
-  color: var(--color-secondary);
+  font-size: 26px;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
   text-decoration: none;
   flex-shrink: 0;
+  text-shadow: 0 0 28px rgba(28, 110, 242, 0.35);
 }
 
 .nav-logo:hover {
-  color: var(--color-secondary);
+  color: var(--color-accent);
+  text-shadow: 0 0 36px rgba(28, 110, 242, 0.55);
 }
 
 /* Hamburger — mobile only */
