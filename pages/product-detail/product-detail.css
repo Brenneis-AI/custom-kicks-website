@@ -1,0 +1,472 @@
+/* =============================================================
+   product-detail.css — Custom Kicks Product Detail Page
+   UI/UX Designer (Agent 3) — 2026-03-10
+   Mobile-first. All desktop upgrades via min-width: 769px only.
+   Max-width media queries are prohibited.
+   No hardcoded colors or fonts — CSS variables only.
+   ============================================================= */
+
+
+/* =============================================================
+   BREADCRUMB
+   ============================================================= */
+
+.breadcrumb {
+  padding: var(--space-md) 0 0;
+}
+
+.breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+  list-style: none;
+}
+
+.breadcrumb__item {
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.breadcrumb__link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb__link:hover {
+  color: var(--color-accent);
+}
+
+.breadcrumb__item--current {
+  color: var(--color-secondary);
+}
+
+
+/* =============================================================
+   PRODUCT MAIN LAYOUT
+   ============================================================= */
+
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 769px) {
+  .product-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+}
+
+
+/* =============================================================
+   PRODUCT GALLERY
+   ============================================================= */
+
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  position: sticky;
+  top: 80px; /* nav height + some breathing room */
+}
+
+.product-gallery__primary-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-neutral-dark);
+  border: var(--border-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.product-gallery__main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity var(--transition-base);
+}
+
+/* Authentication stamp — large Product Detail variant (brand-guide.md) */
+.auth-stamp--large {
+  font-size: 13px;
+  opacity: 0.08;
+  bottom: 16px;
+  left: 16px;
+}
+
+.product-gallery__thumbs {
+  display: flex;
+  gap: var(--space-xs);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.product-gallery__thumbs::-webkit-scrollbar {
+  display: none;
+}
+
+.product-gallery__thumb {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-neutral-dark);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.product-gallery__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-gallery__thumb:hover {
+  border-color: var(--color-text-muted);
+}
+
+.product-gallery__thumb--active {
+  border-color: var(--color-accent);
+}
+
+.product-gallery__thumb:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (min-width: 769px) {
+  .product-gallery__thumb {
+    width: 88px;
+    height: 88px;
+  }
+}
+
+
+/* =============================================================
+   PRODUCT INFO
+   ============================================================= */
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.product-info__name {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, var(--text-h1));
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-snug);
+  color: var(--color-secondary);
+}
+
+/* Product meta definition list */
+.product-info__meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-md) 0;
+}
+
+.product-meta-row {
+  display: flex;
+  gap: var(--space-md);
+  align-items: baseline;
+}
+
+.product-meta-label {
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: var(--tracking-ui);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.product-meta-value {
+  font-size: var(--text-body);
+  color: var(--color-secondary);
+  line-height: var(--leading-body);
+}
+
+/* Size selector */
+.product-info__size-selector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.size-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.size-btn {
+  min-width: 52px;
+  height: 44px;
+  padding: 0 var(--space-sm);
+  background-color: var(--color-neutral-dark);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-ui);
+  font-weight: 500;
+  color: var(--color-secondary);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  text-align: center;
+}
+
+.size-btn:hover {
+  border-color: var(--color-secondary);
+}
+
+.size-btn--active {
+  border-color: var(--color-accent);
+  background-color: rgba(var(--color-accent-rgb), 0.1);
+  color: var(--color-accent);
+}
+
+.size-btn--unavailable {
+  opacity: 0.3;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.size-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Price + Buy CTA */
+.product-info__purchase {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 769px) {
+  .product-info__purchase {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-md);
+  }
+}
+
+.product-info__price {
+  font-family: var(--font-body);
+  font-size: var(--text-price);
+  font-weight: 600;
+  color: var(--color-secondary);
+  line-height: var(--leading-normal);
+}
+
+.product-info__buy-cta {
+  flex-shrink: 0;
+}
+
+@media (min-width: 769px) {
+  .product-info__buy-cta {
+    min-width: 200px;
+  }
+}
+
+/* Authenticity Statement — brand-guide.md typographic treatment */
+.product-info__auth-statement {
+  border-left: var(--border-accent);
+  padding-left: var(--space-md);
+}
+
+.product-info__auth-text {
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  color: var(--color-secondary);
+  line-height: var(--leading-body);
+  text-transform: uppercase;
+}
+
+
+/* =============================================================
+   PRODUCT DETAILS ACCORDION
+   ============================================================= */
+
+.product-details-container {
+  max-width: 800px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion-item:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.accordion-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--space-md) 0;
+  background: none;
+  border: none;
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  letter-spacing: var(--tracking-display-wide);
+  color: var(--color-secondary);
+  cursor: pointer;
+  text-align: left;
+  transition: color var(--transition-fast);
+}
+
+.accordion-trigger:hover {
+  color: var(--color-accent);
+}
+
+.accordion-trigger:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Accordion +/- icon */
+.accordion-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.accordion-icon::before,
+.accordion-icon::after {
+  content: '';
+  position: absolute;
+  background-color: var(--color-text-muted);
+  border-radius: 2px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+/* Horizontal bar — always visible */
+.accordion-icon::before {
+  width: 14px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Vertical bar — hidden when expanded */
+.accordion-icon::after {
+  width: 2px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0;
+}
+
+.accordion-panel {
+  overflow: hidden;
+}
+
+.accordion-panel[hidden] {
+  display: none;
+}
+
+.accordion-panel--open {
+  display: block;
+}
+
+.accordion-panel__inner {
+  padding-bottom: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.accordion-panel__inner p {
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  line-height: var(--leading-body);
+}
+
+.product-spec-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-sm);
+}
+
+.product-spec-list li {
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  line-height: var(--leading-body);
+  padding-left: var(--space-sm);
+  border-left: 2px solid var(--color-border);
+}
+
+.product-spec-list li strong {
+  color: var(--color-secondary);
+}
+
+
+/* =============================================================
+   RELATED PRODUCTS GRID
+   ============================================================= */
+
+.product-grid--related {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+@media (min-width: 480px) {
+  .product-grid--related {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) {
+  .product-grid--related {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Remove underline from card heading links */
+.product-card__name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card__name a:hover {
+  color: var(--color-accent);
+}
+
+.product-card__link {
+  display: block;
+  text-decoration: none;
+}

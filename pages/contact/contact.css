@@ -1,0 +1,190 @@
+/* =============================================================
+   contact.css — Custom Kicks
+   UI/UX Designer (Agent 3) — 2026-03-10
+   Mobile-first. Desktop upgrades via min-width: 769px only.
+   No hardcoded colors or fonts — CSS variables exclusively.
+   ============================================================= */
+
+
+/* =============================================================
+   CONTACT PAGE HEADER — minimal hero
+   Image: Position 26 — white Nike shoe on black background
+   Kept minimal — form is the focus; header is a quiet entrance
+   ============================================================= */
+
+.contact-header {
+  padding: var(--space-xl) 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1617813774819-2b086f744456?w=1600&q=85');
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-header__inner {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+
+.contact-header__h1 {
+  font-size: var(--text-h1);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-display);
+  color: var(--color-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.contact-header__body {
+  font-size: var(--text-body-lg);
+  color: var(--color-text-muted);
+  line-height: var(--leading-body);
+  max-width: 540px;
+}
+
+@media (min-width: 769px) {
+  .contact-header {
+    padding: var(--space-3xl) 0;
+  }
+
+  .contact-header__h1 {
+    font-size: var(--text-h1-hero);
+  }
+}
+
+
+/* =============================================================
+   CONTACT MAIN — 2-column layout: form + info sidebar
+   section-animate on .contact-layout (added in HTML)
+   ============================================================= */
+
+.contact-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 769px) {
+  .contact-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-3xl);
+  }
+
+  .contact-form-col {
+    flex: 1.6;
+  }
+
+  .contact-info-col {
+    flex: 1;
+    position: sticky;
+    top: calc(64px + var(--space-lg)); /* stick below nav */
+  }
+}
+
+
+/* =============================================================
+   CONTACT FORM
+   ============================================================= */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Minimum 44px touch target on all inputs */
+.contact-form .form-input,
+.contact-form .form-select {
+  min-height: 44px;
+}
+
+.contact-form .form-textarea {
+  min-height: 160px;
+}
+
+.contact-form__submit {
+  align-self: flex-start;
+  min-height: 44px;
+}
+
+
+/* =============================================================
+   CONTACT INFO SIDEBAR
+   ============================================================= */
+
+.contact-info-block {
+  padding: var(--space-lg);
+  background-color: var(--color-neutral-dark);
+  border: var(--border-card);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+}
+
+.contact-info-block:last-child {
+  margin-bottom: 0;
+}
+
+.contact-info-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  letter-spacing: var(--tracking-display-wide);
+  color: var(--color-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.contact-info-list {
+  margin-bottom: var(--space-md);
+}
+
+.contact-info-item {
+  margin-bottom: var(--space-sm);
+}
+
+.contact-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-info-label {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 500;
+  letter-spacing: var(--tracking-ui);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.contact-info-value {
+  font-size: var(--text-body);
+  color: var(--color-secondary);
+}
+
+.contact-info-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-info-link:hover {
+  color: var(--color-secondary);
+}
+
+.contact-info-note {
+  font-size: var(--text-ui);
+  color: var(--color-text-muted);
+  line-height: var(--leading-body);
+}
+
+.contact-info-body {
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  line-height: var(--leading-body);
+  margin-bottom: var(--space-md);
+}
+
+.contact-social-cta {
+  display: inline-block;
+  min-height: 44px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

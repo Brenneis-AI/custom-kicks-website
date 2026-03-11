@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Deadstock &amp; Authenticated Sneakers | Custom Kicks</title>
+  <meta name="description" content="Browse our full inventory of authenticated sneakers. Filter by brand, size, condition, and price. Every pair verified before it ships.">
+  <link rel="canonical" href="https://customkicks.com/pages/shop/shop.html">
+  <link rel="stylesheet" href="../../global/brand.css">
+  <link rel="stylesheet" href="../../global/global.css">
+  <link rel="stylesheet" href="shop.css">
+  <!-- JSON-LD from schema-spec.md — verbatim -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://customkicks.com/pages/shop/shop.html#collectionpage",
+        "name": "Shop All Kicks — Custom Kicks",
+        "description": "Browse the full Custom Kicks inventory of authenticated sneakers. Filter by brand, size, condition, and price.",
+        "url": "https://customkicks.com/pages/shop/shop.html",
+        "isPartOf": {
+          "@id": "https://customkicks.com/#website"
+        },
+        "provider": {
+          "@id": "https://customkicks.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- NAV — 2-deep variant -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner container">
+      <a href="../../index.html" class="nav-logo" aria-label="Custom Kicks — Home">CUSTOM KICKS</a>
+
+      <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu" role="list">
+        <li><a href="../shop/shop.html" class="nav-link">Shop</a></li>
+        <li><a href="../sell-consign/sell-consign.html" class="nav-link">Sell</a></li>
+        <li><a href="../about/about.html" class="nav-link">About</a></li>
+        <li><a href="../faq/faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="../contact/contact.html" class="nav-link">Contact</a></li>
+        <li><a href="../shop/shop.html" class="nav-cta">Buy Now</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- nav-overlay is injected by nav.js — do not add a static element here -->
+
+  <main id="main-content">
+
+    <!-- ========================================================
+         PAGE HEADER
+         ======================================================== -->
+    <section class="shop-header section-animate" aria-label="Shop page header">
+      <div class="shop-header__inner container">
+        <div class="shop-header__text">
+          <h1 class="shop-header__heading">Shop All Kicks</h1>
+          <p class="shop-header__sub">Every pair authenticated. Every listing priced for real buyers.</p>
+          <p class="shop-header__count text-muted"><span class="shop-header__count-num">24</span> pairs available</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         FILTER / SORT BAR
+         ======================================================== -->
+    <div class="filter-bar" role="search" aria-label="Filter and sort products">
+      <div class="filter-bar__inner container">
+
+        <div class="filter-bar__filters">
+          <!-- Brand filter -->
+          <div class="filter-group">
+            <label for="filter-brand" class="filter-label">Brand</label>
+            <select id="filter-brand" class="form-select filter-select" aria-label="Filter by brand">
+              <option value="">All Brands</option>
+              <option value="nike">Nike</option>
+              <option value="jordan">Jordan Brand</option>
+              <option value="adidas">Adidas</option>
+              <option value="new-balance">New Balance</option>
+              <option value="asics">Asics</option>
+            </select>
+          </div>
+
+          <!-- Size filter -->
+          <div class="filter-group">
+            <label for="filter-size" class="filter-label">Size</label>
+            <select id="filter-size" class="form-select filter-select" aria-label="Filter by size">
+              <option value="">All Sizes</option>
+              <option value="7">7</option>
+              <option value="7.5">7.5</option>
+              <option value="8">8</option>
+              <option value="8.5">8.5</option>
+              <option value="9">9</option>
+              <option value="9.5">9.5</option>
+              <option value="10">10</option>
+              <option value="10.5">10.5</option>
+              <option value="11">11</option>
+              <option value="11.5">11.5</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+            </select>
+          </div>
+
+          <!-- Condition filter -->
+          <div class="filter-group">
+            <label for="filter-condition" class="filter-label">Condition</label>
+            <select id="filter-condition" class="form-select filter-select" aria-label="Filter by condition">
+              <option value="">All Conditions</option>
+              <option value="deadstock">Deadstock</option>
+              <option value="new-box">New with Box</option>
+              <option value="used-good">Used — Good</option>
+              <option value="used-worn">Used — Worn</option>
+            </select>
+          </div>
+
+          <!-- Price filter -->
+          <div class="filter-group">
+            <label for="filter-price" class="filter-label">Price Range</label>
+            <select id="filter-price" class="form-select filter-select" aria-label="Filter by price range">
+              <option value="">Any Price</option>
+              <option value="0-100">Under $100</option>
+              <option value="100-200">$100 – $200</option>
+              <option value="200-400">$200 – $400</option>
+              <option value="400+">$400+</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Sort -->
+        <div class="filter-bar__sort">
+          <label for="sort-order" class="filter-label">Sort</label>
+          <select id="sort-order" class="form-select filter-select" aria-label="Sort products">
+            <option value="newest">Newest</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+
+      </div><!-- /.filter-bar__inner -->
+    </div><!-- /.filter-bar -->
+
+    <!-- ========================================================
+         PRODUCT GRID
+         ======================================================== -->
+    <section class="section shop-grid-section" aria-label="Product listings">
+      <div class="container">
+
+        <div class="product-grid product-grid--shop" id="product-grid" aria-live="polite">
+
+          <!-- Card 1 — Air Jordan 1 Chicago -->
+          <article class="product-card" aria-label="Air Jordan 1 Retro High OG Chicago">
+            <a href="../product-detail/product-detail.html" class="product-card__link" tabindex="-1" aria-hidden="true">
+              <div class="product-card__image-wrap">
+                <img src="https://images.unsplash.com/photo-1565571323165-ab0ee8e01666?w=800&q=85" alt="Black, red, and white Air Jordan 1 basketball shoes on a neutral surface" width="800" height="800" loading="lazy">
+                <span class="auth-stamp" aria-hidden="true">AUTHENTICATED</span>
+                <div class="product-card__overlay" aria-hidden="true">
+                  <span class="product-card__overlay-text">View Details</span>
+                </div>
+              </div>
+            </a>
+            <div class="product-card__body">
+              <p class="product-card__brand">Nike / Jordan Brand</p>
+              <h2 class="product-card__name"><a href="../product-detail/product-detail.html">Air Jordan 1 Retro High OG "Chicago"</a></h2>
+              <div class="product-card__meta">
+                <span class="product-card__price">$285</span>
+                <span class="product-card__condition">DS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 — Yeezy Boost 350 V2 -->
+          <article class="product-card" aria-label="Adidas Yeezy Boost 350 V2 Zebra">
+            <a href="../product-detail/product-detail.html" class="product-card__link" tabindex="-1" aria-hidden="true">
+              <div class="product-card__image-wrap">
+                <img src="https://images.unsplash.com/photo-1569503905014-5467362589c1?w=800&q=85" alt="Gray Adidas Yeezy Boost 350 sneaker displayed on a plain surface" width="800" height="800" loading="lazy">
+                <span class="auth-stamp" aria-hidden="true">AUTHENTICATED</span>
+                <div class="product-card__overlay" aria-hidden="true">
+                  <span class="product-card__overlay-text">View Details</span>
+                </div>
+              </div>
+            </a>
+            <div class="product-card__body">
+              <p class="product-card__brand">Adidas</p>
+              <h2 class="product-card__name"><a href="../product-detail/product-detail.html">Yeezy Boost 350 V2 "Zebra"</a></h2>
+              <div class="product-card__meta">
+                <span class="product-card__price">$320</span>
+                <span class="product-card__condition">DS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 — Nike Air Force 1 Low -->
+          <article class="product-card" aria-label="Nike Air Force 1 Low White">
+            <a href="../product-detail/product-detail.html" class="product-card__link" tabindex="-1" aria-hidden="true">
+              <div class="product-card__image-wrap">
+                <img src="https://images.unsplash.com/photo-1613070120286-98b11cdb9ae2?w=800&q=85" alt="White Nike Air Force 1 Low sneaker on a minimal background" width="800" height="800" loading="lazy">
+                <span class="auth-stamp" aria-hidden="true">AUTHENTICATED</span>
+                <div class="product-card__overlay" aria-hidden="true">
+                  <span class="product-card__overlay-text">View Details</span>
+                </div>
+              </div>
+            </a>
+            <div class="product-card__body">
+              <p class="product-card__brand">Nike</p>
+              <h2 class="product-card__name"><a href="../product-detail/product-detail.html">Air Force 1 Low '07 "White"</a></h2>
+              <div class="product-card__meta">
+                <span class="product-card__price">$120</span>
+                <span class="product-card__condition">VNDS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 — Nike Black/Red Basketball -->
+          <article class="product-card" aria-label="Nike Black Red Basketball Shoe">
+            <a href="../product-detail/product-detail.html" class="product-card__link" tabindex="-1" aria-hidden="true">
+              <div class="product-card__image-wrap">
+                <img src="https://images.unsplash.com/photo-1593081891731-fda0877988da?w=800&q=85" alt="Black and red Nike basketball shoes on a dark background" width="800" height="800" loading="lazy">
+                <span class="auth-stamp" aria-hidden="true">AUTHENTICATED</span>
+                <div class="product-card__overlay" aria-hidden="true">
+                  <span class="product-card__overlay-text">View Details</span>
+                </div>
+              </div>
+            </a>
+            <div class="product-card__body">
+              <p class="product-card__brand">Nike</p>
+              <h2 class="product-card__name"><a href="../product-detail/product-detail.html">Nike Zoom Freak 4 "Black/Red"</a></h2>
+              <div class="product-card__meta">
+                <span class="product-card__price">$175</span>
+                <span class="product-card__condition">New w/ Box</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 — New Balance B&W -->
+          <article class="product-card" aria-label="New Balance 990 Black and White">
+            <a href="../product-detail/product-detail.html" class="product-card__link" tabindex="-1" aria-hidden="true">
+              <div class="product-card__image-wrap">
+                <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=800&q=85" alt="Black and white New Balance low-top sneaker on a light background" width="800" height="800" loading="lazy">
+                <span class="auth-stamp" aria-hidden="true">AUTHENTICATED</span>
+                <div class="product-card__overlay" aria-hidden="true">
+                  <span class="product-card__overlay-text">View Details</span>
+                </div>
+              </div>
+            </a>
+            <div class="product-card__body">
+              <p class="product-card__brand">New Balance</p>
+              <h2 class="product-card__name"><a href="../product-detail/product-detail.html">New Balance 990 "Black/White"</a></h2>
+              <div class="product-card__meta">
+                <span class="product-card__price">$210</span>
+                <span class="product-card__condition">DS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 — Air Jordan 1 Black/White -->
+          <article class="product-card" aria-label="Air Jordan 1 Black White">
+            <a href="../product-detail/product-detail.html" class="product-card__link" tabindex="-1" aria-hidden="true">
+              <div class="product-card__image-wrap">
+                <img src="https://images.unsplash.com/photo-1585701407425-7122b55a8efc?w=800&q=85" alt="Black and white Air Jordan basketball shoes on a dark surface" width="800" height="800" loading="lazy">
+                <span class="auth-stamp" aria-hidden="true">AUTHENTICATED</span>
+                <div class="product-card__overlay" aria-hidden="true">
+                  <span class="product-card__overlay-text">View Details</span>
+                </div>
+              </div>
+            </a>
+            <div class="product-card__body">
+              <p class="product-card__brand">Nike / Jordan Brand</p>
+              <h2 class="product-card__name"><a href="../product-detail/product-detail.html">Air Jordan 1 Mid "Black/White"</a></h2>
+              <div class="product-card__meta">
+                <span class="product-card__price">$145</span>
+                <span class="product-card__condition">Used — Good</span>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /#product-grid -->
+
+        <!-- Empty State — shown when filters return zero results -->
+        <div class="shop-empty" id="shop-empty" hidden aria-live="polite">
+          <h2 class="shop-empty__heading">No pairs match those filters.</h2>
+          <p class="shop-empty__body">Try adjusting your search — or check back soon. New inventory drops regularly.</p>
+          <button class="btn-secondary" id="clear-filters">Clear Filters</button>
+        </div>
+
+        <!-- Load More -->
+        <div class="shop-load-more">
+          <button class="btn-secondary shop-load-more__btn" type="button" aria-label="Load more products">Load More</button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER — 2-deep variant -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner container">
+
+      <div class="footer-top">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="../../index.html" class="footer-brand-name" aria-label="Custom Kicks — Home">CUSTOM KICKS</a>
+          <p class="footer-tagline">Real Kicks. Authenticated.</p>
+        </div>
+
+        <!-- Shop column -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Shop</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="../shop/shop.html" class="footer-link">All Kicks</a></li>
+            <li><a href="../product-detail/product-detail.html" class="footer-link">Product Detail</a></li>
+          </ul>
+        </div>
+
+        <!-- Sell column -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Sell</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="../sell-consign/sell-consign.html" class="footer-link">Sell / Consign</a></li>
+          </ul>
+        </div>
+
+        <!-- Company column -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Company</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="../about/about.html" class="footer-link">About</a></li>
+            <li><a href="../contact/contact.html" class="footer-link">Contact</a></li>
+            <li><a href="../faq/faq.html" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /.footer-top -->
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span id="copyright-year"></span> Custom Kicks. All rights reserved.</p>
+        <div class="footer-legal">
+          <!-- PLACEHOLDER: Privacy Policy and Terms pages not in build scope. Replace href="#" when pages are created. -->
+          <a href="#" class="footer-legal-link" data-placeholder="true">Privacy Policy</a>
+          <a href="#" class="footer-legal-link" data-placeholder="true">Terms of Use</a>
+        </div>
+      </div><!-- /.footer-bottom -->
+
+    </div><!-- /.footer-inner -->
+  </footer>
+
+  <script src="../../global/nav.js" defer></script>
+  <script src="shop.js" defer></script>
+
+</body>
+</html>

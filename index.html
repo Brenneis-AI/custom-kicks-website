@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Kicks | Authenticated Sneaker Marketplace</title>
+  <meta name="description" content="Custom Kicks is a trusted sneaker resale marketplace. Browse authenticated pairs, sell your sneakers, and shop with confidence. Real shoes. Real prices.">
+  <link rel="canonical" href="https://customkicks.com/">
+  <link rel="stylesheet" href="./global/brand.css">
+  <link rel="stylesheet" href="./global/global.css">
+  <link rel="stylesheet" href="./index.css">
+  <!-- JSON-LD from schema-spec.md — verbatim -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://customkicks.com/#website",
+        "name": "Custom Kicks",
+        "url": "https://customkicks.com",
+        "description": "Custom Kicks is a sneaker resale marketplace offering authenticated footwear for buyers and a straightforward consignment process for sellers.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://customkicks.com/pages/shop/shop.html?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://customkicks.com/#organization",
+        "name": "Custom Kicks",
+        "url": "https://customkicks.com",
+        "description": "Custom Kicks is a sneaker resale marketplace that buys and resells authenticated footwear for dedicated sneaker enthusiasts.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://customkicks.com/global/logo.png"
+        }
+      },
+      {
+        "@type": "Store",
+        "@id": "https://customkicks.com/#store",
+        "name": "Custom Kicks",
+        "url": "https://customkicks.com",
+        "description": "An online sneaker resale marketplace specializing in authenticated footwear. Buy and sell sought-after sneakers with confidence.",
+        "currenciesAccepted": "USD",
+        "paymentAccepted": "Credit Card, Debit Card",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Custom Kicks Sneaker Inventory",
+          "url": "https://customkicks.com/pages/shop/shop.html"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- NAV — Root variant -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner container">
+      <a href="./index.html" class="nav-logo" aria-label="Custom Kicks — Home">CUSTOM KICKS</a>
+
+      <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu" role="list">
+        <li><a href="./pages/shop/shop.html" class="nav-link">Shop</a></li>
+        <li><a href="./pages/sell-consign/sell-consign.html" class="nav-link">Sell</a></li>
+        <li><a href="./pages/about/about.html" class="nav-link">About</a></li>
+        <li><a href="./pages/faq/faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="./pages/contact/contact.html" class="nav-link">Contact</a></li>
+        <li><a href="./pages/shop/shop.html" class="nav-cta">Buy Now</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- nav-overlay is injected by nav.js — do not add a static element here -->
+
+  <main id="main-content">
+
+    <!-- ========================================================
+         HERO
+         ======================================================== -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__inner container">
+        <h1 class="hero__headline hero-animate">The Sneaker Marketplace. Authenticated.</h1>
+        <p class="hero__body hero-animate hero-animate--delay-1">Every pair on Custom Kicks is authenticated before it ships. Browse with confidence, sell with ease — this is where shoeheads do business.</p>
+        <div class="hero__ctas hero-animate hero-animate--delay-2">
+          <a href="./pages/shop/shop.html" class="btn-primary">Shop Now</a>
+          <a href="./pages/sell-consign/sell-consign.html" class="btn-secondary">Sell Your Pair</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TRUST BAR
+         ======================================================== -->
+    <div class="trust-bar section-animate" aria-label="Trust signals">
+      <div class="container">
+        <ul class="trust-bar__list" role="list">
+          <li class="trust-bar__item"><strong>Every Pair Authenticated</strong></li>
+          <li class="trust-bar__item trust-bar__divider" aria-hidden="true"></li>
+          <li class="trust-bar__item"><strong>Fast, Secure Shipping</strong></li>
+          <li class="trust-bar__item trust-bar__divider" aria-hidden="true"></li>
+          <li class="trust-bar__item"><strong>Buyer Protection Guaranteed</strong></li>
+          <li class="trust-bar__item trust-bar__divider" aria-hidden="true"></li>
+          <li class="trust-bar__item"><strong>Trusted by Shoeheads</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         HOW IT WORKS — BUYING
+         ======================================================== -->
+    <section class="section hiw-buy section-animate" aria-labelledby="hiw-buy-heading">
+      <div class="container">
+        <p class="hiw__eyebrow text-upper text-muted">HOW IT WORKS</p>
+        <h2 class="section-heading" id="hiw-buy-heading">Buying Is Simple</h2>
+        <div class="hiw__grid">
+          <div class="hiw__step">
+            <span class="hiw__number" aria-hidden="true">01</span>
+            <h3 class="hiw__step-title">Browse</h3>
+            <p class="hiw__step-body">Find your next pair. Filter by brand, size, condition, or price — the inventory is yours to explore.</p>
+          </div>
+          <div class="hiw__step">
+            <span class="hiw__number" aria-hidden="true">02</span>
+            <h3 class="hiw__step-title">Authenticate</h3>
+            <p class="hiw__step-body">Every shoe in our catalog has been inspected and authenticated. You're not gambling on a listing — you're buying a confirmed pair.</p>
+          </div>
+          <div class="hiw__step">
+            <span class="hiw__number" aria-hidden="true">03</span>
+            <h3 class="hiw__step-title">Ship</h3>
+            <p class="hiw__step-body">Once your order is placed, we ship fast. Your kicks arrive protected, exactly as listed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         HOW IT WORKS — SELLING
+         ======================================================== -->
+    <section class="section section--alt hiw-sell section-animate" aria-labelledby="hiw-sell-heading">
+      <div class="container">
+        <p class="hiw__eyebrow text-upper text-muted">SELL YOUR KICKS</p>
+        <h2 class="section-heading" id="hiw-sell-heading">Getting Paid Is Even Simpler</h2>
+        <div class="hiw__grid">
+          <div class="hiw__step">
+            <span class="hiw__number" aria-hidden="true">01</span>
+            <h3 class="hiw__step-title">Submit</h3>
+            <p class="hiw__step-body">Tell us what you've got. Fill out a quick form with the basics — model, size, condition, and asking price.</p>
+          </div>
+          <div class="hiw__step">
+            <span class="hiw__number" aria-hidden="true">02</span>
+            <h3 class="hiw__step-title">We Authenticate</h3>
+            <p class="hiw__step-body">Our team reviews your submission and authenticates the pair. No fakes, no exceptions — that's what makes us worth selling through.</p>
+          </div>
+          <div class="hiw__step">
+            <span class="hiw__number" aria-hidden="true">03</span>
+            <h3 class="hiw__step-title">You Get Paid</h3>
+            <p class="hiw__step-body">Accept our offer, ship the pair, and receive payment once we confirm receipt. Fast, direct, no delays.</p>
+          </div>
+        </div>
+        <div class="hiw-sell__cta">
+          <a href="./pages/sell-consign/sell-consign.html" class="btn-primary">Submit Your Pair</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         FEATURED DROPS
+         ======================================================== -->
+    <section class="section featured-drops section-animate" aria-labelledby="featured-drops-heading">
+      <div class="container">
+        <p class="featured-drops__eyebrow text-upper text-muted">JUST DROPPED</p>
+        <h2 class="section-heading" id="featured-drops-heading">Fresh Inventory, Authenticated and Ready</h2>
+        <p class="section-subheading">The latest additions to the Custom Kicks catalog. Every pair authenticated. Every listing priced right.</p>
+
+        <div class="product-grid product-grid--3">
+
+          <!-- Card 1 — Air Jordan 1 Chicago -->
+          <article class="product-card" aria-label="Air Jordan 1 Retro High OG Chicago">
+            <a href="./pages/product-detail/product-detail.html" class="product-card__link" tabindex="-1" aria-hidden="true">
+              <div class="product-card__image-wrap">
+                <img src="https://images.unsplash.com/photo-1565571323165-ab0ee8e01666?w=800&q=85" alt="Black, red, and white Air Jordan 1 basketball shoes on a neutral surface" width="800" height="800" loading="lazy">
+                <span class="auth-stamp" aria-hidden="true">AUTHENTICATED</span>
+                <div class="product-card__overlay" aria-hidden="true">
+                  <span class="product-card__overlay-text">View Details</span>
+                </div>
+              </div>
+            </a>
+            <div class="product-card__body">
+              <p class="product-card__brand">Nike / Jordan Brand</p>
+              <h3 class="product-card__name"><a href="./pages/product-detail/product-detail.html">Air Jordan 1 Retro High OG "Chicago"</a></h3>
+              <div class="product-card__meta">
+                <span class="product-card__price">$285</span>
+                <span class="product-card__condition">DS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 — Yeezy Boost 350 V2 -->
+          <article class="product-card" aria-label="Adidas Yeezy Boost 350 V2">
+            <a href="./pages/product-detail/product-detail.html" class="product-card__link" tabindex="-1" aria-hidden="true">
+              <div class="product-card__image-wrap">
+                <img src="https://images.unsplash.com/photo-1569503905014-5467362589c1?w=800&q=85" alt="Gray Adidas Yeezy Boost 350 sneaker displayed on a plain surface" width="800" height="800" loading="lazy">
+                <span class="auth-stamp" aria-hidden="true">AUTHENTICATED</span>
+                <div class="product-card__overlay" aria-hidden="true">
+                  <span class="product-card__overlay-text">View Details</span>
+                </div>
+              </div>
+            </a>
+            <div class="product-card__body">
+              <p class="product-card__brand">Adidas</p>
+              <h3 class="product-card__name"><a href="./pages/product-detail/product-detail.html">Yeezy Boost 350 V2 "Zebra"</a></h3>
+              <div class="product-card__meta">
+                <span class="product-card__price">$320</span>
+                <span class="product-card__condition">DS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 — Nike Air Force 1 -->
+          <article class="product-card" aria-label="Nike Air Force 1 Low">
+            <a href="./pages/product-detail/product-detail.html" class="product-card__link" tabindex="-1" aria-hidden="true">
+              <div class="product-card__image-wrap">
+                <img src="https://images.unsplash.com/photo-1613070120286-98b11cdb9ae2?w=800&q=85" alt="White Nike Air Force 1 Low sneaker on a minimal background" width="800" height="800" loading="lazy">
+                <span class="auth-stamp" aria-hidden="true">AUTHENTICATED</span>
+                <div class="product-card__overlay" aria-hidden="true">
+                  <span class="product-card__overlay-text">View Details</span>
+                </div>
+              </div>
+            </a>
+            <div class="product-card__body">
+              <p class="product-card__brand">Nike</p>
+              <h3 class="product-card__name"><a href="./pages/product-detail/product-detail.html">Air Force 1 Low '07 "White"</a></h3>
+              <div class="product-card__meta">
+                <span class="product-card__price">$120</span>
+                <span class="product-card__condition">VNDS</span>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /.product-grid -->
+
+        <div class="featured-drops__cta">
+          <a href="./pages/shop/shop.html" class="btn-secondary">See All Kicks</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SOCIAL PROOF / COMMUNITY SIGNAL
+         ======================================================== -->
+    <section class="section section--alt social-proof section-animate" aria-labelledby="social-proof-heading">
+      <div class="container">
+        <div class="social-proof__inner">
+          <div class="social-proof__text">
+            <p class="social-proof__eyebrow text-upper text-muted">THE COUNT</p>
+            <h2 class="social-proof__stat" id="social-proof-heading">500+ Pairs Sold</h2>
+            <!-- COPY FLAG: Social proof count (500+ pairs sold) is an approximation — client should confirm actual sales figure or provide testimonial quotes. If count is not yet accurate, substitute a brand statement: "A Growing Community of Authenticated Buyers and Sellers." -->
+            <p class="social-proof__body">Real sneakers. Real buyers. A community of shoeheads who know real heat when they see it — and know a fake from a mile out.</p>
+          </div>
+          <div class="social-proof__image-wrap">
+            <img src="https://images.unsplash.com/photo-1612821745127-53855be9cbd1?w=1200&q=85" alt="Person walking in black and white Nike sneakers on an urban surface" width="1200" height="800" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CTA STRIP
+         ======================================================== -->
+    <section class="section cta-strip section-animate" aria-label="Call to action">
+      <div class="container">
+        <div class="cta-strip__inner">
+          <h2 class="cta-strip__heading">Ready to Shop?</h2>
+          <div class="cta-strip__actions">
+            <a href="./pages/shop/shop.html" class="btn-primary">Browse All Kicks</a>
+            <a href="./pages/sell-consign/sell-consign.html" class="btn-secondary">Sell a Pair</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER — Root variant -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner container">
+
+      <div class="footer-top">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="./index.html" class="footer-brand-name" aria-label="Custom Kicks — Home">CUSTOM KICKS</a>
+          <p class="footer-tagline">Real Kicks. Authenticated.</p>
+        </div>
+
+        <!-- Shop column -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Shop</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="./pages/shop/shop.html" class="footer-link">All Kicks</a></li>
+            <li><a href="./pages/product-detail/product-detail.html" class="footer-link">Product Detail</a></li>
+          </ul>
+        </div>
+
+        <!-- Sell column -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Sell</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="./pages/sell-consign/sell-consign.html" class="footer-link">Sell / Consign</a></li>
+          </ul>
+        </div>
+
+        <!-- Company column -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Company</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="./pages/about/about.html" class="footer-link">About</a></li>
+            <li><a href="./pages/contact/contact.html" class="footer-link">Contact</a></li>
+            <li><a href="./pages/faq/faq.html" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /.footer-top -->
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span id="copyright-year"></span> Custom Kicks. All rights reserved.</p>
+        <div class="footer-legal">
+          <!-- PLACEHOLDER: Privacy Policy and Terms pages not in build scope. Replace href="#" when pages are created. -->
+          <a href="#" class="footer-legal-link" data-placeholder="true">Privacy Policy</a>
+          <a href="#" class="footer-legal-link" data-placeholder="true">Terms of Use</a>
+        </div>
+      </div><!-- /.footer-bottom -->
+
+    </div><!-- /.footer-inner -->
+  </footer>
+
+  <script src="./global/nav.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+/* =============================================================
+   about.css — Custom Kicks
+   UI/UX Designer (Agent 3) — 2026-03-10
+   Mobile-first. Desktop upgrades via min-width: 769px only.
+   No hardcoded colors or fonts — CSS variables exclusively.
+   ============================================================= */
+
+
+/* =============================================================
+   ABOUT HERO
+   Image: Position 23 — green and black Nike on dark background
+   ============================================================= */
+
+.about-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.68)), url('https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=1600&q=85');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.about-hero__inner {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  width: 100%;
+}
+
+.about-hero__h1 {
+  font-size: var(--text-h1);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-display);
+  color: var(--color-secondary);
+  max-width: 760px;
+}
+
+@media (min-width: 769px) {
+  .about-hero {
+    min-height: 70vh;
+    align-items: center;
+  }
+
+  .about-hero__h1 {
+    font-size: var(--text-h1-hero);
+  }
+}
+
+
+/* =============================================================
+   EYEBROW — shared across about page sections
+   ============================================================= */
+
+.about-eyebrow {
+  display: block;
+  font-size: var(--text-small);
+  font-weight: 500;
+  letter-spacing: var(--tracking-ui);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+
+/* =============================================================
+   BRAND ORIGIN STORY — section-animate applied in HTML
+   ============================================================= */
+
+.about-origin__grid {
+  max-width: 760px;
+}
+
+.about-body-lg {
+  font-size: var(--text-body-lg);
+  color: var(--color-text-muted);
+  line-height: var(--leading-body);
+  margin-bottom: var(--space-md);
+}
+
+.about-body-lg:last-child {
+  margin-bottom: 0;
+}
+
+.about-body {
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  line-height: var(--leading-body);
+  margin-bottom: var(--space-md);
+}
+
+.about-body:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =============================================================
+   MISSION STATEMENT — Full typographic treatment
+   Brand guide: "The Standard for Authenticated Resale" in large
+   Bebas Neue with electric blue accent treatment.
+   The "AUTHENTICATED" watermark is a CSS-only typographic element:
+   Bebas Neue, low opacity, rotated — per brand guide spec.
+   ============================================================= */
+
+.about-mission {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-neutral-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+/* The "AUTHENTICATED" watermark stamp — CSS-only, brand distinctive element */
+.about-mission::before {
+  content: 'AUTHENTICATED';
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: clamp(40px, 8vw, 100px);
+  letter-spacing: var(--tracking-stamp);
+  color: var(--color-secondary);
+  opacity: 0.04;
+  transform: rotate(-12deg);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  text-transform: uppercase;
+  z-index: 0;
+}
+
+.about-mission__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.about-mission__label {
+  display: block;
+  font-size: var(--text-small);
+  font-weight: 500;
+  letter-spacing: var(--tracking-ui);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+/* The typographic moment: large Bebas Neue with electric blue left border */
+.about-mission__statement {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 80px);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-display);
+  color: var(--color-secondary);
+  padding-left: var(--space-md);
+  border-left: var(--border-accent);
+  margin-bottom: var(--space-md);
+  max-width: 800px;
+}
+
+.about-mission__body {
+  font-size: var(--text-body-lg);
+  color: var(--color-text-muted);
+  line-height: var(--leading-body);
+  padding-left: calc(var(--space-md) + 3px); /* align with statement text after the border */
+  max-width: 640px;
+}
+
+@media (min-width: 769px) {
+  .about-mission {
+    padding: var(--space-3xl) 0;
+  }
+}
+
+
+/* =============================================================
+   AUTHENTICITY COMMITMENT — 2-column image + copy grid
+   section-animate applied on outer div in HTML
+   ============================================================= */
+
+.about-auth__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.about-auth__image-wrap {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: var(--border-card);
+}
+
+.about-auth__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 3 / 2;
+}
+
+@media (min-width: 769px) {
+  .about-auth__grid {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-2xl);
+  }
+
+  .about-auth__image-wrap {
+    flex: 1;
+    max-width: 520px;
+    order: -1; /* Image left, copy right */
+  }
+
+  .about-auth__copy {
+    flex: 1;
+  }
+}
+
+
+/* =============================================================
+   TRUST POINTS — 4-column grid
+   section-animate applied on section in HTML
+   ============================================================= */
+
+.about-trust__intro-image-wrap {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: var(--border-card);
+  margin-bottom: var(--space-lg);
+}
+
+.about-trust__intro-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+}
+
+@media (min-width: 769px) {
+  .about-trust__intro-image {
+    aspect-ratio: 16 / 5;
+  }
+}
+
+.about-trust__header {
+  margin-bottom: var(--space-lg);
+}
+
+.about-trust__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 769px) {
+  .about-trust__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-trust__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.about-trust__point {
+  padding: var(--space-lg);
+  background-color: var(--color-neutral-light);
+  border: var(--border-card);
+  border-radius: var(--radius-md);
+  position: relative;
+}
+
+.about-trust__number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+}
+
+.about-trust__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  letter-spacing: var(--tracking-display-wide);
+  color: var(--color-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.about-trust__body {
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  line-height: var(--leading-body);
+}
+
+
+/* =============================================================
+   SOCIAL CTA
+   ============================================================= */
+
+.about-social {
+  background-color: var(--color-primary);
+}
+
+.about-social__inner {
+  max-width: 640px;
+}
+
+.about-social__body {
+  font-size: var(--text-body-lg);
+  color: var(--color-text-muted);
+  line-height: var(--leading-body);
+  margin-bottom: var(--space-lg);
+  margin-top: var(--space-xs);
+}
+
+.about-social__cta {
+  display: inline-block;
+}

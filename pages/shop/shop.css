@@ -1,0 +1,224 @@
+/* =============================================================
+   shop.css — Custom Kicks Shop Page
+   UI/UX Designer (Agent 3) — 2026-03-10
+   Mobile-first. All desktop upgrades via min-width: 769px only.
+   Max-width media queries are prohibited.
+   No hardcoded colors or fonts — CSS variables only.
+   ============================================================= */
+
+
+/* =============================================================
+   SHOP PAGE HEADER
+   ============================================================= */
+
+.shop-header {
+  padding: var(--space-xl) 0 var(--space-lg);
+  background-image:
+    linear-gradient(rgba(var(--color-primary-rgb), 0.65), rgba(var(--color-primary-rgb), 0.65)),
+    url('https://images.unsplash.com/photo-1525092029632-cb75fe5dd776?w=1600&q=85');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (min-width: 769px) {
+  .shop-header {
+    padding: var(--space-3xl) 0 var(--space-2xl);
+  }
+}
+
+.shop-header__heading {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-snug);
+  color: var(--color-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.shop-header__sub {
+  font-size: var(--text-body-lg);
+  color: var(--color-text-muted);
+  line-height: var(--leading-body);
+  margin-bottom: var(--space-xs);
+}
+
+.shop-header__count {
+  font-size: var(--text-ui);
+  font-weight: 500;
+  letter-spacing: var(--tracking-ui);
+  text-transform: uppercase;
+}
+
+.shop-header__count-num {
+  color: var(--color-accent);
+}
+
+
+/* =============================================================
+   FILTER / SORT BAR
+   ============================================================= */
+
+.filter-bar {
+  position: sticky;
+  top: 64px; /* height of nav */
+  z-index: 50;
+  background-color: var(--color-neutral-dark);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-sm) 0;
+}
+
+.filter-bar__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 769px) {
+  .filter-bar__inner {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-md);
+  }
+}
+
+.filter-bar__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  flex: 1;
+}
+
+.filter-bar__sort {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 180px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.filter-label {
+  font-size: var(--text-small);
+  font-weight: 500;
+  letter-spacing: var(--tracking-ui);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.filter-select {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--radius-sm);
+  padding: 8px var(--space-sm);
+  font-size: var(--text-ui);
+  color: var(--color-secondary);
+  width: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%238A8A8A' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-sm) center;
+  padding-right: var(--space-2xl);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.filter-select:focus {
+  border-color: var(--color-accent);
+}
+
+
+/* =============================================================
+   PRODUCT GRID — Shop layout
+   ============================================================= */
+
+.shop-grid-section {
+  padding-top: var(--space-lg);
+}
+
+.product-grid--shop {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 480px) {
+  .product-grid--shop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) {
+  .product-grid--shop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+/* Remove underline from card heading links */
+.product-card__name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card__name a:hover {
+  color: var(--color-accent);
+}
+
+.product-card__link {
+  display: block;
+  text-decoration: none;
+}
+
+
+/* =============================================================
+   EMPTY STATE
+   ============================================================= */
+
+.shop-empty {
+  grid-column: 1 / -1;
+  padding: var(--space-3xl) 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.shop-empty__heading {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  letter-spacing: var(--tracking-display);
+  color: var(--color-secondary);
+}
+
+.shop-empty__body {
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  max-width: 480px;
+}
+
+
+/* =============================================================
+   LOAD MORE
+   ============================================================= */
+
+.shop-load-more {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-md);
+}
+
+.shop-load-more__btn {
+  min-width: 200px;
+}
